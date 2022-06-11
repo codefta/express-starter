@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier:check": "prettier --check",
+    "prettier:write": "prettier --write",
+    "lint:check": "eslint --ext .js,.ts",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "fathisiddiqi",
@@ -16,7 +21,9 @@
   },
   "devDependencies": {
     "eslint": "^8.17.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "prettier": "2.6.2"
   }
 }

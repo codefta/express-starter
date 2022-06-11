@@ -4,9 +4,12 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended"],
+  plugins: ["prettier"],
   parserOptions: {
     ecmaVersion: "latest",
   },
-  rules: {},
+  rules: {
+    "prettier/prettier": "error",
+  },
 };
