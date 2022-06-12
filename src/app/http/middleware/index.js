@@ -1,1 +1,3 @@
-module.exports = {};
+module.exports = {
+  unknownEndpoint: require("./unknownEndpoint"),
+};
