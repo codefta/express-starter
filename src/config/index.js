@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+require("dotenv").config();
+
 module.exports = {
-  port: 3001,
+  port: process.env.PORT,
 };
