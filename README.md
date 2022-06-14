@@ -12,6 +12,10 @@ Simple, functionizable, clean
 - Lint check `npm run lint`
 - Lint fix `npm run lint:fix`
 
+## Usage using docker-compose
+
+- Run `docker-compose up -d`
+
 ## Principle
 
 - Functional
@@ -34,5 +38,6 @@ Simple, functionizable, clean
       - `response` - Helper for manipulate response data
       - `index.js` - Entry point / routes entry for module
   - `config` - Configuration
+  - `pkg` - Data access layer for third party service
+  - `service` - Third-party service
   - `util` - Helper functions
-  - `adapter` - Third-party adapter
