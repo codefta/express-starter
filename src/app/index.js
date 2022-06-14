@@ -1,10 +1,7 @@
 const http = require("./http");
+const express = require("express");
+const app = express();
 
-/**
- * App server, put any transport layer here
- *
- * @param {*} app
- */
-module.exports = function (app) {
-  http(app);
-};
+http(app);
+
+module.exports = app;
