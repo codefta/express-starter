@@ -8,5 +8,5 @@ const responseError = require("../../../util/responseError");
  * @param {*} res
  */
 module.exports = (req, res) => {
-  responseError(res, notFoundError("Unknown endpoint"));
+  return responseError(res, notFoundError("Unknown endpoint"));
 };

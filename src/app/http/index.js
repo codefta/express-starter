@@ -1,5 +1,8 @@
 const express = require("express");
-const { unknownEndpoint } = require("./middleware");
+const {
+  unknownEndpointMiddleware,
+  mongoDbMiddleware,
+} = require("./middleware");
 const routes = require("./routes");
 
 /**
@@ -10,7 +13,9 @@ const routes = require("./routes");
 module.exports = function (app) {
   app.use(express.json());
 
+  app.use(mongoDbMiddleware);
+
   routes(app);
 
-  app.use(unknownEndpoint);
+  app.use(unknownEndpointMiddleware);
 };

@@ -1,3 +1,4 @@
 module.exports = {
-  unknownEndpoint: require("./unknownEndpoint"),
+  unknownEndpointMiddleware: require("./unknownEndpoint"),
+  mongoDbMiddleware: require("./mongoDb"),
 };
