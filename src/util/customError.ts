@@ -4,7 +4,7 @@
  * @param {string} message
  * @returns object with code and message
  */
-function badRequestError(message) {
+export function badRequestError(message: string): CustomError {
   return {
     code: 400,
     name: "BadRequestError",
@@ -18,7 +18,7 @@ function badRequestError(message) {
  * @param {string} message
  * @returns object with code and message
  */
-function unAuthorizedError(message) {
+export function unAuthorizedError(message: string): CustomError {
   return {
     code: 401,
     name: "UnAuthorizedError",
@@ -32,7 +32,7 @@ function unAuthorizedError(message) {
  * @param {string} message
  * @returns object with code and message
  */
-function forbiddenError(message) {
+export function forbiddenError(message: string): CustomError {
   return {
     code: 403,
     name: "ForbiddenError",
@@ -46,7 +46,7 @@ function forbiddenError(message) {
  * @param {string} message
  * @returns object with code and message
  */
-function notFoundError(message) {
+export function notFoundError(message: string): CustomError {
   return {
     code: 404,
     name: "NotFoundError",
@@ -60,7 +60,7 @@ function notFoundError(message) {
  * @param {string} message
  * @returns object with code and message
  */
-function internalServerError(message) {
+export function internalServerError(message: string): CustomError {
   return {
     code: 500,
     name: "InternalServerError",
@@ -68,10 +68,8 @@ function internalServerError(message) {
   };
 }
 
-module.exports = {
-  badRequestError,
-  unAuthorizedError,
-  forbiddenError,
-  notFoundError,
-  internalServerError,
-};
+export interface CustomError {
+  code: number;
+  name: string;
+  message: string;
+}

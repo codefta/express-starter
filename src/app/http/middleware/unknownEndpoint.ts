@@ -1,5 +1,6 @@
+import { Request } from "express";
+import { responseError } from "../../../util/responseJson";
 const { notFoundError } = require("../../../util/customError");
-const responseError = require("../../../util/responseError");
 
 /**
  * Block unknown requests
@@ -7,6 +8,6 @@ const responseError = require("../../../util/responseError");
  * @param {*} req
  * @param {*} res
  */
-module.exports = (req, res) => {
+export const unknownEndpoint = (_req: any, res: any): any => {
   return responseError(res, notFoundError("Unknown endpoint"));
 };
